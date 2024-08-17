@@ -13,7 +13,7 @@ const MONGODB_URI = process.env.MONGODB_URI;
 // Middleware
 app.use(bodyParser.json());
 app.use(cors()); // Enable CORS with default settings
-app.use('https://futureskill.onrender.com/api/cards', cardRoutes); // Ensure routes are properly set up
+app.use('/api/cards', cardRoutes); // Ensure routes are properly set up
 
 // MongoDB connection
 mongoose.connect(MONGODB_URI, {
