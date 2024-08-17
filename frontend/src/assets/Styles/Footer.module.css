@@ -1,0 +1,55 @@
+/* Footer.module.css */
+.Footer{
+background-color: black;
+border-radius: 0 0 10px 10px;
+}
+.footerContainer {
+    height: 300px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Space elements evenly */
+    padding: 10px; /* Padding around the container */
+  }
+  
+  .footerSection {
+
+    flex: 1;
+    min-width: 180px; /* Adjusted minimum width to fit more compactly */
+    margin: 2px; /* Reduced margin between sections */
+  }
+  
+  .footerTitle {
+   font-family: sans-serif;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 6px; /* Margin below the title */
+  }
+  
+  .footerList {
+    font-family: sans-serif;
+
+    color: white;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footerItem {
+    font-size: 14px;
+    margin-bottom: 4px; /* Margin between list items */
+  }
+  
+  .footerBottom {
+    text-align: center;
+    margin-top: 10px; /* Margin above the bottom section */
+  }
+  
+  .footerLogo {
+    font-size: 18px; /* Font size for the logo */
+    font-weight: bold;
+    margin-bottom: 6px; /* Margin below the logo */
+  }
+  

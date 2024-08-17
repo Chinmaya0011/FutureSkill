@@ -1,0 +1,60 @@
+/* Header.module.css */
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: #000000;
+    border-bottom: 2px solid #e0e0e0;
+    border-radius: 20px 20px 0 0;
+  }
+  
+  .titleContainer {
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #f4f4f4;
+    margin-right: 10px;
+  }
+  
+  .separator {
+    font-size: 24px;
+    color: #ffffff;
+  }
+  
+  .subtitle {
+    font-size: 20px;
+    color: #fffdfd;
+    margin-left: 10px;
+  }
+  
+  .buttonContainer {
+    margin-right: 50px;
+
+    display: flex;
+    align-items: center;
+  }
+  
+  .submitButton {
+    background-color: #0f1822;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.6s ease, border 0.6s ease; /* Slow animation for background-color and border */
+  }
+  
+  .submitButton:hover {
+    border: 1px solid transparent; /* Change border to transparent on hover */
+    background-color: #444d57;
+  }
+  
+  

@@ -1,0 +1,66 @@
+/* CreateRequest.module.css */
+.createRequestContainer {
+    max-width: 600px; /* Restricts the width of the form */
+    margin: 0 auto; /* Centers the container horizontally */
+    padding: 20px; /* Adds padding around the container */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for a lifted effect */
+  }
+  
+  .heading {
+    font-size: 24px; /* Font size for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    text-align: center; /* Centers the heading text */
+  }
+  
+  .formGroup {
+    margin-bottom: 15px; /* Space between form groups */
+  }
+  
+  .label {
+    display: block; /* Makes the label block level */
+    font-size: 16px; /* Font size for the label */
+    margin-bottom: 5px; /* Space below the label */
+  }
+  
+  .input {
+    width: 100%; /* Full width of the container */
+    padding: 10px; /* Padding inside the input */
+    font-size: 16px; /* Font size for the input text */
+    border: 1px solid #ddd; /* Light border color */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+  }
+  
+.buttonContainer {
+  text-align: start;
+  margin-top: 20px;
+}
+
+.submitButton {
+  background-color: #161617;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #0056b3;
+}
+.statusMessage {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #ff0000; /* Default to red for errors */
+}
+
+/* Style for success message */
+.statusMessage.success {
+  color: #28a745; /* Green color for success */
+}
