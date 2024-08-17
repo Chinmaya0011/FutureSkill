@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import style from '../assets/Styles/Cards.module.css';
 import { useCreate } from '../Context/CreateContext';
-
+import { Link } from 'react-router-dom';
 
 const Cards = () => {
   const [cards, setCards] = useState([]);
   const [filteredCards, setFilteredCards] = useState([]);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
   const { searchQuery } = useCreate(); // Use the search query from context
 
   // Function to fetch cards from the server
   const fetchCards = async () => {
+    setLoading(true);
     try {
       const response = await fetch('http://localhost:3000/api/cards');
       if (!response.ok) {
@@ -27,6 +29,8 @@ const Cards = () => {
     } catch (error) {
       setError(error.message);
       console.error('Error fetching cards:', error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -43,17 +47,31 @@ const Cards = () => {
     }
   }, [searchQuery, cards]);
 
+  // Fetch cards on component mount
   useEffect(() => {
     fetchCards();
+    // Optional: Clean up function to handle component unmount
+    return () => {
+      setCards([]);
+      setFilteredCards([]);
+    };
   }, []);
+
+  if (loading) {
+    return <p className={style.loading}>Loading cards...</p>;
+  }
 
   return (
     <div className={style.cardsContainer}>
       {error && <p className={style.error}>Error: {error}</p>}
       {filteredCards.length > 0 ? (
         filteredCards.map(card => (
-          <div key={card._id} className={style.card}>
-            <h2>{card.title}</h2>
+          <div key={card.title} className={style.card}>
+            <h2>
+              <Link to={`/card/${encodeURIComponent(card.title)}`} aria-label={`View details for ${card.title}`}>
+                {card.title}
+              </Link>
+            </h2>
             <p>{card.description}</p>
           </div>
         ))

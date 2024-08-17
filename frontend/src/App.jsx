@@ -1,20 +1,20 @@
-import React from 'react'
-import Header from './components/Header'
-import SearchBar from './components/SearchBar'
-import Cards from './components/Cards'
-import Footer from './components/Footer'
-import { CreateProvider } from './Context/CreateContext'
+// src/App.js
+import React from 'react';
+import Header from './components/Header';
+import SearchBar from './components/SearchBar';
+import Footer from './components/Footer';
+import { CreateProvider } from './Context/CreateContext';
+import AppRoutes from './Routes'; // Import your routes
+
 const App = () => {
   return (
-    <div>
-      <CreateProvider>
-      <Header/>
-      <SearchBar/>
-      <Cards/>
-      <Footer/>
-      </CreateProvider>
-    </div>
-  )
-}
+    <CreateProvider>
+      <Header />
+      <SearchBar />
+      <AppRoutes /> {/* Routing handled by AppRoutes */}
+      <Footer />
+    </CreateProvider>
+  );
+};
 
-export default App
+export default App;
