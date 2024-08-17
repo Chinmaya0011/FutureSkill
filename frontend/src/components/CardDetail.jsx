@@ -12,7 +12,7 @@ const CardDetail = () => {
   useEffect(() => {
     const fetchCard = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/api/cards/${encodeURIComponent(title)}`);
+        const response = await fetch(`https://futureskill.onrender.com/api/cards/${encodeURIComponent(title)}`);
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }

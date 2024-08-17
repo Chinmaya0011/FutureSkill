@@ -19,7 +19,7 @@ const CreateRequest = () => {
 
     try {
       // Send form data to the server
-      const response = await fetch('http://localhost:3000/api/cards', {
+      const response = await fetch('https://futureskill.onrender.com/api/cards', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ const CreateRequest = () => {
           <input
             type="text"
             id="title"
-            className={style.input}
+            className={style.inputTitle}
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
@@ -68,7 +68,7 @@ const CreateRequest = () => {
           <input
             type="text"
             id="description"
-            className={style.input}
+            className={style.inputDes}
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             required

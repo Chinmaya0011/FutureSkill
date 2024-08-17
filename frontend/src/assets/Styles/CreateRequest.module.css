@@ -24,7 +24,7 @@
     margin-bottom: 5px; /* Space below the label */
   }
   
-  .input {
+  .inputTitle,.inputDes {
     width: 100%; /* Full width of the container */
     padding: 10px; /* Padding inside the input */
     font-size: 16px; /* Font size for the input text */
@@ -32,7 +32,9 @@
     border-radius: 4px; /* Rounded corners */
     box-sizing: border-box; /* Includes padding and border in the element's total width and height */
   }
-  
+  .inputDes{
+    height: 100px;
+  }
 .buttonContainer {
   text-align: start;
   margin-top: 20px;
