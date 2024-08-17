@@ -19,7 +19,7 @@ const CreateRequest = () => {
 
     try {
       // Send form data to the server
-      const response = await fetch('http://localhost:3000/api/cards', {
+      const response = await fetch('https://futureskill.onrender.com/api/cards', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

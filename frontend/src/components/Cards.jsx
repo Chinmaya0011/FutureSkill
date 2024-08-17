@@ -14,7 +14,7 @@ const Cards = () => {
   const fetchCards = async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:3000/api/cards');
+      const response = await fetch('https://futureskill.onrender.com/api/cards');
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
